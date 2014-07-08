@@ -111,8 +111,14 @@
 {
     if (left < right) {
         NSInteger pivotIndex = [self partitionWithArray:theArray Left:left andRight:right];
+//        NSLog(@"=======================1=======================") ;
+        [self printArray:theArray] ;
         [self quickSortWithArray:theArray withLeft:left withRight:pivotIndex];
+//        NSLog(@"======================2=======================") ;
+        [self printArray:theArray] ;
         [self quickSortWithArray:theArray withLeft:pivotIndex+1 withRight:right];
+//        NSLog(@"=======================3=======================") ;
+        [self printArray:theArray] ;
     }
 }
 
@@ -127,7 +133,6 @@
         }
     }
     [theArray exchangeObjectAtIndex:left withObjectAtIndex:leftTraversal];
-    
     return [theArray indexOfObject:pivot];
 }
 
@@ -135,8 +140,9 @@
 
 -(void)printArray:(NSMutableArray*)theArray
 {
+//    NSLog(@"==================================") ;
     for (int i=0;i<theArray.count;i++) {
-        NSLog(@"index %d: %d",i,[[theArray objectAtIndex:i]  intValue]);
+//        NSLog(@"index %d: %d",i,[[theArray objectAtIndex:i]  intValue]);
     }
 }
 

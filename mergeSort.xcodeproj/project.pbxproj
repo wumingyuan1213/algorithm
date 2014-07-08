@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		84A44F41196A594500A3AFCA /* MergeSortUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F40196A594500A3AFCA /* MergeSortUtil.m */; };
 		84A44F44196A776800A3AFCA /* QuickSortUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F43196A776800A3AFCA /* QuickSortUtil.m */; };
+		84A44F47196B981B00A3AFCA /* RemoveDuplicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F46196B981B00A3AFCA /* RemoveDuplicate.m */; };
 		84CAB8FD19640C5D008B9301 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CAB8FC19640C5D008B9301 /* Foundation.framework */; };
 		84CAB90019640C5D008B9301 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB8FF19640C5D008B9301 /* main.m */; };
 		84CAB90419640C5D008B9301 /* mergeSort.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84CAB90319640C5D008B9301 /* mergeSort.1 */; };
@@ -33,6 +34,8 @@
 		84A44F40196A594500A3AFCA /* MergeSortUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSortUtil.m; sourceTree = "<group>"; };
 		84A44F42196A776800A3AFCA /* QuickSortUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSortUtil.h; sourceTree = "<group>"; };
 		84A44F43196A776800A3AFCA /* QuickSortUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSortUtil.m; sourceTree = "<group>"; };
+		84A44F45196B981B00A3AFCA /* RemoveDuplicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveDuplicate.h; sourceTree = "<group>"; };
+		84A44F46196B981B00A3AFCA /* RemoveDuplicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveDuplicate.m; sourceTree = "<group>"; };
 		84CAB8F919640C5D008B9301 /* mergeSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mergeSort; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CAB8FC19640C5D008B9301 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84CAB8FF19640C5D008B9301 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				84A44F40196A594500A3AFCA /* MergeSortUtil.m */,
 				84A44F42196A776800A3AFCA /* QuickSortUtil.h */,
 				84A44F43196A776800A3AFCA /* QuickSortUtil.m */,
+				84A44F45196B981B00A3AFCA /* RemoveDuplicate.h */,
+				84A44F46196B981B00A3AFCA /* RemoveDuplicate.m */,
 			);
 			path = mergeSort;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				84A44F44196A776800A3AFCA /* QuickSortUtil.m in Sources */,
 				84CAB90C19640C8A008B9301 /* MergeSort.m in Sources */,
 				84CAB90019640C5D008B9301 /* main.m in Sources */,
+				84A44F47196B981B00A3AFCA /* RemoveDuplicate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
