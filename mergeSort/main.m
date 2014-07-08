@@ -17,25 +17,41 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         MergeSortUtil *mergeSort = [[MergeSortUtil alloc]init] ;
-        NSArray *array = [mergeSort mergeSort:@[@100,@7,@10,@19,@200,@25,@12,@17,@31,@30,@48]] ;
+        NSArray *array = [mergeSort mergeSort:@[@1,@1,@2]] ;
         NSLog(@"%@",array) ;
         
         QuickSortUtil *quickSort = [[QuickSortUtil alloc]init] ;
-        NSMutableArray *arrays = [NSMutableArray arrayWithArray:@[@9,@3,@6,@7,@4,@5]] ;
+        NSMutableArray *arrays = [NSMutableArray arrayWithArray:@[@1,@2,@1]] ;
 //        NSLog(@"origin = array===>%@",arrays) ;
-        [quickSort quickSortAnArray:arrays] ;
-//        NSLog(@"%@",arrays) ;
+        [quickSort quickSort:arrays] ;
+        NSLog(@"%@",arrays) ;
         
         
         //========
-        NSMutableArray *array1 = [NSMutableArray arrayWithArray:@[@1,@4,@5,@7,@9,@88,@100,@2,@6,@13]] ;
-        [quickSort quickSortAnArray:array1] ;
-        NSMutableArray *array2 = [NSMutableArray arrayWithArray:@[@2,@3,@6,@7,@8,@88,@90,@1000,@108,@1,@40]] ;
-        [quickSort quickSortAnArray:array2] ;
+//        NSMutableArray *array1 = [NSMutableArray arrayWithArray:@[@1,@2,@1]] ;
+//        [quickSort quickSort:array1] ;
+//        NSMutableArray *array2 = [NSMutableArray arrayWithArray:@[@2,@3]] ;
+//        [quickSort quickSort:array2] ;
         
-        RemoveDuplicate *removeDuplicate = [[RemoveDuplicate alloc]init] ;
-        NSArray *arraysss = [removeDuplicate removeDuplicate2WithArray1:array1 array2:array2] ;
-        NSLog(@"arrayss== %@",arraysss) ;
+        /*
+         test code
+         1、A为空，B为空
+         2、A无重复，B为空
+         3、A有重复，B为空 x
+         4、A无重复，B无重复
+         5、A有重复，B无重复 x
+         6、A有重复，B有重复，且重复内容不一样 x
+         7、A有重复，B有重复，且重复内容有一样的 x
+         */
+        
+//        RemoveDuplicate *removeDuplicate = [[RemoveDuplicate alloc]init] ;
+//        NSArray *arraysss = [removeDuplicate removeDuplicate2WithArray1:array1 array2:array2] ;
+//        NSLog(@"arrayss== %@",arraysss) ;
+        
+        
+        
+        NSArray *resultArray = [array sortedArrayUsingSelector:@selector(compare:)];
+        
     }
     return 0;
 }

@@ -37,24 +37,70 @@
     
 }
 
--(NSUInteger)quickArrayMake1:(NSMutableArray *)array
-              withStartIndex:(NSUInteger)left
-               withLastIndex:(NSUInteger)right
+-(int)quickArrayMake3:(NSMutableArray *)s
+       withStartIndex:(int)ll
+        withLastIndex:(int)rr
 {
     
-    NSNumber *k = array[left] ;
+    int i = ll, j = rr;
+	NSNumber *number = s[ll]; //s[l]即s[i]就是第一个坑
+	while (i < j)
+	{
+		// 从右向左找小于x的数来填s[i]
+		while(i < j && [s[j]intValue] >= [number intValue])
+			j--;
+		if(i < j)
+		{
+			s[i] = s[j]; //将s[j]填到s[i]中，s[j]就形成了一个新的坑
+			i++;
+		}
+        
+		// 从左向右找大于或等于x的数来填s[j]
+		while(i < j && [s[i] intValue]< [number intValue])
+			i++;
+		if(i < j)
+		{
+			s[j] = s[i]; //将s[i]填到s[j]中，s[i]就形成了一个新的坑
+			j--;
+		}
+	}
+	//退出时，i等于j。将x填到这个坑中。
+	s[i] = number;
+    
+	return i;
+}
+
+
+
+-(int)quickArrayMake1:(NSMutableArray *)array
+       withStartIndex:(int)ll
+        withLastIndex:(int)rr
+{
+    
+    int left = ll, right = rr;
+    NSNumber *k = array[ll] ;
     while (left<right)
     {
-        while (left<right &&[array[right] intValue]> [k intValue])
+        
+        while (left<right &&[array[right] intValue]>= [k intValue])
         {
-            right -- ;
+            right-- ;
         }
-        array[left] = array[right] ;
-        while (left<right &&[array[left] intValue] < [k intValue])
+        
+        if(left < right)
+		{
+            array[left] = array[right] ;
+			left ++;
+		}
+        while (left<right &&[array[left] intValue] <= [k intValue])
         {
             left ++ ;
         }
-        array[right] = array[left] ;
+        if(left < right)
+		{
+            array[right] = array[left] ;
+			right--;
+		}
     }
     array[left] = k ;
     return left ;
@@ -82,8 +128,8 @@
 
 
 -(void)quickSort:(NSMutableArray *)array
-  withStartIndex:(NSUInteger)i
-   withLastIndex:(NSUInteger)j
+  withStartIndex:(int)i
+   withLastIndex:(int)j
 {
     if(i<j)
     {
@@ -91,13 +137,19 @@
         [self quickSort:array withStartIndex:i withLastIndex:index-1] ;
         [self quickSort:array withStartIndex:index+1 withLastIndex:j] ;
     }
-    
 }
 
 -(void)quickSort:(NSMutableArray *)array
 {
     NSUInteger index = [array count];
     [self quickSort:array withStartIndex:0 withLastIndex:index-1] ;
+}
+
+
+-(void)quickSort2:(NSMutableArray *)array
+{
+    NSUInteger index = [array count];
+    [self quickArrayMake2:array withStartIndex:0 withLastIndex:index-1] ;
 }
 
 
@@ -111,13 +163,13 @@
 {
     if (left < right) {
         NSInteger pivotIndex = [self partitionWithArray:theArray Left:left andRight:right];
-//        NSLog(@"=======================1=======================") ;
+        //        NSLog(@"=======================1=======================") ;
         [self printArray:theArray] ;
         [self quickSortWithArray:theArray withLeft:left withRight:pivotIndex];
-//        NSLog(@"======================2=======================") ;
+        //        NSLog(@"======================2=======================") ;
         [self printArray:theArray] ;
         [self quickSortWithArray:theArray withLeft:pivotIndex+1 withRight:right];
-//        NSLog(@"=======================3=======================") ;
+        //        NSLog(@"=======================3=======================") ;
         [self printArray:theArray] ;
     }
 }
@@ -140,9 +192,9 @@
 
 -(void)printArray:(NSMutableArray*)theArray
 {
-//    NSLog(@"==================================") ;
+    //    NSLog(@"==================================") ;
     for (int i=0;i<theArray.count;i++) {
-//        NSLog(@"index %d: %d",i,[[theArray objectAtIndex:i]  intValue]);
+        //        NSLog(@"index %d: %d",i,[[theArray objectAtIndex:i]  intValue]);
     }
 }
 

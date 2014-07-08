@@ -12,6 +12,9 @@
 
 - (void) quickSort:(NSMutableArray *)array ;
 
+
+-(void)quickSort2:(NSMutableArray *)array ;
+
 -(void)quickSortAnArray:(NSMutableArray*) theArray ;
 
 
