@@ -12,6 +12,7 @@
 		84A44F47196B981B00A3AFCA /* RemoveDuplicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F46196B981B00A3AFCA /* RemoveDuplicate.m */; };
 		84A44F4C196C409A00A3AFCA /* BuddleSortUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F4B196C409A00A3AFCA /* BuddleSortUtil.m */; };
 		84A44F4F196C50DC00A3AFCA /* NSArray+BuddleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F4E196C50DC00A3AFCA /* NSArray+BuddleSort.m */; };
+		84A44F52196CECFC00A3AFCA /* BiSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A44F51196CECFC00A3AFCA /* BiSearch.m */; };
 		84CAB8FD19640C5D008B9301 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CAB8FC19640C5D008B9301 /* Foundation.framework */; };
 		84CAB90019640C5D008B9301 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB8FF19640C5D008B9301 /* main.m */; };
 		84CAB90419640C5D008B9301 /* mergeSort.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84CAB90319640C5D008B9301 /* mergeSort.1 */; };
@@ -42,6 +43,8 @@
 		84A44F4B196C409A00A3AFCA /* BuddleSortUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddleSortUtil.m; sourceTree = "<group>"; };
 		84A44F4D196C50DC00A3AFCA /* NSArray+BuddleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BuddleSort.h"; sourceTree = "<group>"; };
 		84A44F4E196C50DC00A3AFCA /* NSArray+BuddleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BuddleSort.m"; sourceTree = "<group>"; };
+		84A44F50196CECFC00A3AFCA /* BiSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiSearch.h; sourceTree = "<group>"; };
+		84A44F51196CECFC00A3AFCA /* BiSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiSearch.m; sourceTree = "<group>"; };
 		84CAB8F919640C5D008B9301 /* mergeSort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mergeSort; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CAB8FC19640C5D008B9301 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84CAB8FF19640C5D008B9301 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				84A44F4B196C409A00A3AFCA /* BuddleSortUtil.m */,
 				84A44F4D196C50DC00A3AFCA /* NSArray+BuddleSort.h */,
 				84A44F4E196C50DC00A3AFCA /* NSArray+BuddleSort.m */,
+				84A44F50196CECFC00A3AFCA /* BiSearch.h */,
+				84A44F51196CECFC00A3AFCA /* BiSearch.m */,
 			);
 			path = mergeSort;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			files = (
 				84A44F4F196C50DC00A3AFCA /* NSArray+BuddleSort.m in Sources */,
 				84A44F41196A594500A3AFCA /* MergeSortUtil.m in Sources */,
+				84A44F52196CECFC00A3AFCA /* BiSearch.m in Sources */,
 				84A44F44196A776800A3AFCA /* QuickSortUtil.m in Sources */,
 				84CAB90C19640C8A008B9301 /* MergeSort.m in Sources */,
 				84A44F4C196C409A00A3AFCA /* BuddleSortUtil.m in Sources */,

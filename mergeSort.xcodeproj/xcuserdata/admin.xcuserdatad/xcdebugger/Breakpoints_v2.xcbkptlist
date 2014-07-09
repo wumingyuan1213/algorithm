@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "mergeSort/NSArray+BuddleSort.m"
-            timestampString = "426530244.822079"
+            filePath = "mergeSort/BiSearch.m"
+            timestampString = "426571465.840952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-sortedArrayUsingComparatorss:"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-biSearch:withObject:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

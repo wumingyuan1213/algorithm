@@ -12,6 +12,7 @@
 #import "QuickSortUtil.h"
 #import "RemoveDuplicate.h"
 #import "BuddleSortUtil.h"
+#import "BiSearch.h"
 
 #import "NSArray+BuddleSort.h"
 
@@ -21,13 +22,13 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         MergeSortUtil *mergeSort = [[MergeSortUtil alloc]init] ;
         NSArray *array = [mergeSort mergeSort:@[@1,@1,@2]] ;
-        NSLog(@"%@",array) ;
+//        NSLog(@"%@",array) ;
         
         QuickSortUtil *quickSort = [[QuickSortUtil alloc]init] ;
         NSMutableArray *arrays = [NSMutableArray arrayWithArray:@[@1,@2,@1]] ;
         //        NSLog(@"origin = array===>%@",arrays) ;
         [quickSort quickSort:arrays] ;
-        NSLog(@"%@",arrays) ;
+//        NSLog(@"%@",arrays) ;
         
         
         //========
@@ -59,7 +60,7 @@ int main(int argc, const char * argv[])
         
         BuddleSortUtil *buddleSortUtil = [[BuddleSortUtil alloc]init] ;
         [buddleSortUtil buddleSort:buddleArray] ;
-        NSLog(@"==>%@",buddleArray) ;
+//        NSLog(@"==>%@",buddleArray) ;
         
         NSArray *categoryArray = @[@1,@19,@12,@87,@28,@2,@89] ;
         NSArray *finalarray = [categoryArray sortedArrayUsingComparatorss:^BuddleComparisonResult(id obj1, id obj2) {
@@ -72,9 +73,12 @@ int main(int argc, const char * argv[])
             return BuddleOrderedSame;
         }];
         
-        NSLog(@"finalarray==%@",finalarray) ;
+//        NSLog(@"finalarray==%@",finalarray) ;
         
         
+        BiSearch *biSearch = [[BiSearch alloc]init] ;
+        NSInteger index = [biSearch biSearch:@[@1,@3,@5,@7,@8,@9,@10,@11,@18,@19,@20,@21] withObject:@10] ;
+        NSLog(@"index==%d",index);
     }
     return 0;
 }

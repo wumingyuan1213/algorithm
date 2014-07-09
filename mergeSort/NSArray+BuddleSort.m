@@ -23,10 +23,8 @@
             {
                 case BuddleOrderedAscending:
                 {
-                    
                 }
                     break;
-                    
                 case BuddleOrderedDescending:
                 {
                     NSNumber *number = array[j] ;
