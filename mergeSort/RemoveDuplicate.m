@@ -104,6 +104,21 @@
 }
 
 
+-(void)duplication
+{
+    NSMutableArray *finalArray = [[NSMutableArray alloc] init];
+    NSArray *array = @[@(1),@(2),@(2),@(3),@(4),@(4),@(6),@(6),@(7),@(8),@(8),@(9),@(10),];
+    [finalArray addObject:array[0]] ;
+    for(int i=1 ;i<[array count] ;i++)
+    {
+        if(array[i]!=[finalArray lastObject])
+        {
+            [finalArray addObject:array[i]] ;
+        }
+    }
+}
+
+
 
 
 
